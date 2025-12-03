@@ -16,20 +16,15 @@ Concatenated Top1–Top25 into a single text field.
 Cleaned text: lowercasing, removing punctuation/HTML, stopword removal, lemmatization.
 Vectorization: Bag‑of‑Words with n‑grams (1–2), max 5000 features.
 Train/test split: 80% training, 20% testing, ordered by date.
-Workflow
-Text Cleaning: Remove noise, stopwords, lemmatize tokens.
-Vectorization: Bag‑of‑Words and n‑gram features.
 
-**Baseline Models:**
-Random Forest
-Logistic Regression
-Multinomial Naive Bayes
-
-**Contribution Model:**
+**Workflow:**
+**1) Text Cleaning:** Remove noise, stopwords, lemmatize tokens.
+**2) Vectorization:** Bag‑of‑Words and n‑gram features.
+**3) Baseline Models:** Random Forest, Logistic Regression, Multinomial Naive Bayes
+**4) Contribution Model:**
 Multi‑Layer Perceptron (MLP) with GridSearchCV for hyperparameter tuning.
 Parameters tuned: hidden layer sizes, activation functions, regularization (alpha).
-
-**Evaluation:**
+**5) Evaluation:**
 Metrics: Accuracy, Precision, Recall, F1 Score.
 Confusion matrices for error analysis.
 Comparative bar plots of F1 scores across models.
