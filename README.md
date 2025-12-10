@@ -43,42 +43,32 @@ NLTK
 Matplotlib, Seaborn
 Joblib
 
-**Results**
-Baseline models achieved F1 scores in the range of ~0.55–0.65.
-The MLP classifier, after hyperparameter tuning, showed competitive performance and highlighted the potential of neural architectures for text‑based financial prediction.
-Random Forest remained strong on n‑gram features, but MLP provided a valuable nonlinear benchmark.
-Example visualization:
-Bar chart comparing F1 scores of all models.
-Confusion matrix for MLP predictions.
+### Results and Conclusion :
+The project successfully reproduced the original research paper on predicting stock market movements using news headlines and NLP. We added a Multi-Layer Perceptron (MLP) model to the baseline models.
 
-**Conclusion**
-This project demonstrates how NLP can be applied to financial news headlines to predict stock market movements. By reproducing baseline models and adding an MLP classifier, we explored the impact of neural architectures on prediction accuracy. While results are not yet sufficient for real‑world trading, the work provides a solid foundation for understanding text preprocessing, feature engineering, and model evaluation in financial NLP tasks.
+### Key results:
+Random Forest: Accuracy = 0.5226, F1 = 0.6042
+Logistic Regression: Accuracy = 0.4347, F1 = 0.4989
+Multinomial Naive Bayes: Accuracy = 0.4975, F1 = 0.5633
+MLP Classifier: Accuracy = 0.4698, F1 = 0.5462
 
-**Future Work**
-Experiment with TF‑IDF and pretrained embeddings (e.g., GloVe, FinBERT).
-Extend to multi‑class classification (e.g., strong rise, weak rise, fall).
-Apply time‑series models (LSTM, Transformers) to capture sequential dependencies.
-Incorporate sentiment scores from external APIs.
+The MLP model did not outperform Random Forest but captured some non-linear patterns in the text data, showing that neural networks can also be applied to this problem.
 
-**References**
-Original paper: Predicting stock market using natural language processing (Emerald Publishing, 2023).
-Kaggle dataset: Combined_News_DJIA.
-Scikit‑learn documentation.
-NLTK documentation.
+### Future Extension :
+Implement transformer-based models (BERT, RoBERTa) for richer contextual embeddings.
+Incorporate real-time financial news and sentiment analysis from social media platforms.
+Explore ensemble models that combine textual and numerical features for improved accuracy.
+Expand dataset to include multiple market indices and global financial news for broader applicability.
 
-## Results
+### References:
 
-After training and evaluation, we compared the baseline models (Random Forest, Logistic Regression, Naive Bayes) with our contribution (MLP Classifier). The table below summarizes the performance metrics:
+[1] Kaggle Dataset – Combined News for DJIA: https://www.kaggle.com/aaron7sun/stocknews
 
-| Model              | Accuracy | Precision | Recall | F1 Score |
-|--------------------|----------|-----------|--------|----------|
-| Random Forest      | 0.62     | 0.61      | 0.63   | 0.62     |
-| Logistic Regression| 0.60     | 0.59      | 0.61   | 0.60     |
-| Multinomial NB     | 0.58     | 0.57      | 0.58   | 0.58     |
-| MLP Classifier     | 0.64     | 0.63      | 0.65   | 0.64     |
+[2] Research Paper: “Predicting Stock Market Movements using News Headlines” (2019+) – Original methodology for stock prediction using NLP and ML models.
 
-### Visualizations
-- **Bar chart of F1 scores** comparing all models.  
-- **Confusion matrix** for MLP predictions to show error distribution.  
+[3] GitHub Repository of Original Paper: https://github.com/SATHVIKRAJU/Stock-Market-Prediction-using-Natural-Language-Processing – Provides code and instructions to reproduce baseline models (Random Forest, Logistic Regression, Naive Bayes).
 
-These plots are saved in the `results/` folder and referenced in the README for clarity.
+[4] Scikit-learn Documentation – https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html
+
+[5] Text Preprocessing & TF-IDF References –
+Bird, Steven, et al. “Natural Language Processing with Python.” O’Reilly Media, 2009.
